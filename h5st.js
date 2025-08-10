@@ -7,34 +7,3 @@ var ParamsSign=function(){'use strict';function a0714a0M(){var oO=['ChjVDg90ExbL
 
 
 
-const { JSDOM } = require('jsdom');
-const dom = new JSDOM('<!DOCTYPE html>', {
-  // 关键配置：启用资源加载和脚本运行
-  resources: "usable",
-  runScripts: "dangerously",
-  // 可以添加一个URL来模拟真实环境
-  url: "https://example.com"
-});
-
-// 模拟全局对象
-global.window = dom.window;
-global.document = dom.window.document;
-global.Element = dom.window.Element; // 关键：添加Element定义
-global.localStorage = dom.window.localStorage;
-global.sessionStorage = dom.window.sessionStorage;
-
-// 之后再引入或运行你的代码
-
-
-
-
-const u = {
-    "appid": "search-pc-java",
-    "functionId": "pc_search_searchWare",
-    "client": "pc",
-    "clientVersion": "1.0.0",
-    "t": 1754786055161,
-    "body": "84ed566889f881493ea2b144a31d8c9663ece5052e6b4e27ef54e8df943dc309"
-}
-
-ParamsSign(u)
